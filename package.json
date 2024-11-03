@@ -1,0 +1,36 @@
+{
+  "name": "project-shop",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "run-p type-check \"build-only {@}\" --",
+    "preview": "vite preview",
+    "build-only": "vite build",
+    "type-check": "vue-tsc --build --force"
+  },
+  "dependencies": {
+    "particles.vue3": "^2.12.0",
+    "pinia": "^2.2.4",
+    "tsparticles": "^3.5.0",
+    "tsparticles-slim": "^2.12.0",
+    "vue": "^3.5.12",
+    "vue-router": "^4.4.5",
+    "vue3-particles": "^2.12.0"
+  },
+  "devDependencies": {
+    "@tsconfig/node20": "^20.1.4",
+    "@types/node": "^20.17.0",
+    "@vitejs/plugin-vue": "^5.1.4",
+    "@vitejs/plugin-vue-jsx": "^4.0.1",
+    "@vue/tsconfig": "^0.5.1",
+    "autoprefixer": "^10.4.20",
+    "npm-run-all2": "^7.0.1",
+    "postcss": "^8.4.47",
+    "tailwindcss": "^3.4.14",
+    "typescript": "~5.6.0",
+    "vite": "^5.4.10",
+    "vue-tsc": "^2.1.6"
+  }
+}
