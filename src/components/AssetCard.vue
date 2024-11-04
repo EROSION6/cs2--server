@@ -17,8 +17,9 @@ defineProps({
 			)`,
 			backgroundSize: 'cover',
 			backgroundPosition: 'center',
+			display: asset.id ? 'flex' : 'none',
 		}"
-		class="w-full h-28 flex items-center rounded-xl transition-transform duration-300 cursor-pointer px-4 hover:scale-[1.02]"
+		class="w-full h-24 flex items-center rounded-xl transition-transform duration-300 cursor-pointer px-4 hover:scale-[1.02]"
 	>
 		<div class="w-full flex justify-between">
 			<div class="flex flex-col">

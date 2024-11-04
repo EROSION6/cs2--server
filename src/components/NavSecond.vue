@@ -5,7 +5,7 @@ import Vkontake from './icon/Vkontake.vue'
 
 <template>
 	<div
-		class="w-full flex items-center justify-between px-4 py-2 bg-[#1A1529] rounded-lg"
+		class="w-full flex items-center justify-between px-2 py-2 bg-[#1A1529] rounded-lg"
 	>
 		<div class="flex items-center gap-2 md:hidden">
 			<div class="lg:hidden">
@@ -19,8 +19,16 @@ import Vkontake from './icon/Vkontake.vue'
 				<div
 					class="flex gap-2 bg-transparent border border-[#BC74D4] rounded-xl py-2 px-3"
 				>
-					<router-link to="#"><Vkontake class="w-5 h-5" /> </router-link>
-					<router-link to="#"><Discord class="w-5 h-5" /></router-link>
+					<router-link to="#"
+						><Vkontake
+							class="w-5 h-5 transition-transform duration-300 hover:scale-110"
+						/>
+					</router-link>
+					<router-link to="#"
+						><Discord
+							color="#BC74D4"
+							class="w-5 h-5 transition-transform duration-300 hover:scale-110"
+					/></router-link>
 				</div>
 			</div>
 		</div>

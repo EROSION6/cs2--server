@@ -1,40 +1,9 @@
 <script setup lang="ts">
+import { NAVIGATION_LINKS } from '@/constant'
 import { ref } from 'vue'
-import Application from './icon/Application.vue'
-import Donate from './icon/Donate.vue'
-import Rules from './icon/Rules.vue'
-import Skinchenger from './icon/Skinchenger.vue'
+import Burger from './icon/Burger.vue'
 import Steam from './icon/Steam.vue'
-import User from './icon/User.vue'
 import Wallet from './icon/Wallet.vue'
-
-const NAVIGATION_LINKS = [
-	{
-		label: 'Донат',
-		icon: Donate,
-		route: '/donate',
-	},
-	{
-		label: 'Игроки',
-		icon: User,
-		route: '/users',
-	},
-	{
-		label: 'Правила',
-		icon: Rules,
-		route: '/rules',
-	},
-	{
-		label: 'Заявки',
-		icon: Application,
-		route: '/application',
-	},
-	{
-		label: 'Скинченджер',
-		icon: Skinchenger,
-		route: '/skinchenger',
-	},
-]
 
 const isOpen = ref(false)
 </script>
@@ -43,15 +12,20 @@ const isOpen = ref(false)
 	<header
 		class="w-[1440px] flex items-center justify-between px-3 py-1 bg-[#1A1529] rounded-lg xl2:w-full"
 	>
-		<button class="hidden lg:block" @click="isOpen = true">burger</button>
+		<button class="hidden lg:block" @click="isOpen = !isOpen">
+			<Burger class="w-10 h-10" />
+		</button>
 		<transition name="fade">
-			<div v-if="!isOpen" class="lg:fixed inset-0 bg-[#1A1529] lg:h-[400px]">
+			<div
+				v-if="!isOpen"
+				class="lg:fixed inset-0 z-10 bg-[#1A1529] lg:h-[400px]"
+			>
 				<nav>
 					<ul class="flex items-center gap-2 lg:flex-col lg:items-start">
 						<li
 							v-for="link in NAVIGATION_LINKS"
 							:key="link.route"
-							class="flex items-center gap-2 text-[#BC74D4] transition duration-300 hover:bg-[#140f22] py-3 px-4 rounded-2xl cursor-pointer"
+							class="flex items-center gap-2 text-[#BC74D4] transition duration-300 hover:bg-[#201a33] py-3 px-4 rounded-2xl cursor-pointer"
 						>
 							<component
 								:is="link.icon"
@@ -66,7 +40,7 @@ const isOpen = ref(false)
 				</nav>
 				<button
 					class="hidden lg:block lg:fixed top-2 right-5"
-					@click="isOpen = false"
+					@click="isOpen = !isOpen"
 				>
 					close
 				</button>
@@ -74,12 +48,12 @@ const isOpen = ref(false)
 		</transition>
 		<div class="flex space-x-2">
 			<button
-				class="flex items-center gap-2 bg-[#302832] text-[#F4CA80] text-sm py-4 px-6 rounded-xl font-semibold transition duration-300 hover:bg-[#3d3c33] md:px-4"
+				class="flex items-center gap-2 bg-[#302832] text-[#F4CA80] text-sm py-4 px-6 rounded-xl font-semibold transition duration-300 hover:bg-[#3d3c33] md:px-4 md:text-xs"
 			>
-				<Wallet class="w-5 h-5" /> <span>Пополнить</span>
+				<Wallet class="w-5 h-5" /> <span class="md:hidden">Пополнить</span>
 			</button>
 			<button
-				class="flex items-center gap-2 bg-[#B379FF] py-4 px-6 rounded-2xl text-white text-sm font-semibold md:px-4"
+				class="flex items-center gap-2 bg-[#B379FF] py-4 px-6 rounded-2xl text-white text-sm font-semibold md:px-3 md:text-xs md:font-normal"
 			>
 				Войти через Steam
 				<Steam class="w-5 h-5" />

@@ -1,80 +1,36 @@
+<script setup lang="ts">
+import CardNavigation from './CardNavigation.vue'
+</script>
+
 <template>
 	<div class="flex flex-col gap-1 md:w-full">
-		<div
-			class="relative w-[350px] py-9 px-5 flex items-center overflow-hidden shadow1 rounded-xl md:w-full"
-		>
-			<h3 class="text-2xl text-[#B379FF] font-bold">Скинченджер</h3>
-			<img
-				src="https://poshlye-project.ru/app/modules/module_block_main_banner_slider/assets/img/sc.png"
-				alt="img"
-				class="absolute w-[300px] h-[170px] -right-[100px] -bottom-[50px]"
+		<CardNavigation
+			title="Скинченджер"
+			image-url="https://poshlye-project.ru/app/modules/module_block_main_banner_slider/assets/img/sc.png"
+			card-width="w-[350px] md:w-full "
+			shadow-class="shadow_purple"
+		/>
+		<CardNavigation
+			title="Магазин"
+			image-url="https://poshlye-project.ru/app/modules/module_block_main_banner_slider/assets/img/shop.png"
+			card-width="w-[350px] md:w-full"
+			shadow-class="shadow_orange"
+		/>
+		<div class="flex gap-1">
+			<CardNavigation
+				title="На сайте"
+				value="29"
+				color="text-lime-500"
+				card-width="w-[175px] md:w-[50%]"
+				shadow-class="shadow_green"
 			/>
-		</div>
-
-		<div class="flex gap-1">
-			<div
-				class="relative w-[220px] py-7 px-5 flex items-center overflow-hidden shadow2 rounded-xl md:w-2/3"
-			>
-				<h3 class="text-2xl text-[#B379FF] font-bold">Магазин</h3>
-				<img
-					src="https://poshlye-project.ru/app/modules/module_block_main_banner_slider/assets/img/shop.png"
-					alt="img"
-					class="absolute w-[20rem] h-[160px] -right-[60px] -bottom-[55px]"
-				/>
-			</div>
-
-			<div
-				class="relative w-[130px] flex items-center justify-center py-7 px-5 overflow-hidden shadow3 rounded-xl md:w-1/3"
-			>
-				<img
-					src="https://poshlye-project.ru/app/modules/module_block_main_banner_slider/assets/img/sc.png"
-					alt="img"
-					class="w-20 h-10"
-				/>
-			</div>
-		</div>
-
-		<div class="flex gap-1">
-			<div
-				class="relative w-[175px] py-7 px-5 flex items-center overflow-hidden shadow2 rounded-xl md:w-2/4"
-			>
-				<img
-					src="https://poshlye-project.ru/app/modules/module_block_main_banner_slider/assets/img/shop.png"
-					alt="img"
-					class="w-20 h-10"
-				/>
-			</div>
-
-			<div
-				class="relative w-[175px] py-7 px-5 flex items-center overflow-hidden shadow3 rounded-xl md:w-2/4"
-			>
-				<img
-					src="https://poshlye-project.ru/app/modules/module_block_main_banner_slider/assets/img/sc.png"
-					alt="img"
-					class="w-20 h-10"
-				/>
-			</div>
+			<CardNavigation
+				title="Играют"
+				value="67"
+				color="text-[#B379FF]"
+				card-width="w-[175px] md:w-[50%]"
+				shadow-class="shadow_purple"
+			/>
 		</div>
 	</div>
 </template>
-
-<style scoped>
-.shadow1::before,
-.shadow2::before,
-.shadow3::before {
-	content: '';
-	position: absolute;
-	top: 0;
-	right: 0;
-	height: 100%;
-	width: 100%;
-	background-image: linear-gradient(270deg, #b379ff, transparent);
-	opacity: 0.2;
-}
-.shadow2::before {
-	background-image: linear-gradient(270deg, #f4ca80, transparent);
-}
-.shadow3::before {
-	background-image: linear-gradient(270deg, #5865f2, transparent);
-}
-</style>

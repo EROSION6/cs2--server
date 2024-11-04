@@ -11,70 +11,68 @@ const particlesLoaded = async container => {
 </script>
 
 <template>
-	<div>
-		<vue-particles
-			id="tsparticles"
-			:particlesInit="particlesInit"
-			:particlesLoaded="particlesLoaded"
-			:options="{
-				background: {
-					color: {
-						value: 'transparent',
-					},
+	<vue-particles
+		id="tsparticles"
+		:particlesInit="particlesInit"
+		:particlesLoaded="particlesLoaded"
+		:options="{
+			background: {
+				color: {
+					value: 'transparent',
 				},
-				fpsLimit: 120,
-				interactivity: {
-					events: {
-						onClick: {
-							enable: false,
-						},
-						onHover: {
-							enable: false,
-						},
-						resize: true,
-					},
-				},
-				particles: {
-					color: {
-						value: '#ffffff',
-					},
-					links: {
+			},
+			fpsLimit: 120,
+			interactivity: {
+				events: {
+					onClick: {
 						enable: false,
 					},
-					collisions: {
+					onHover: {
 						enable: false,
 					},
-					move: {
-						direction: 'top',
+					resize: true,
+				},
+			},
+			particles: {
+				color: {
+					value: '#ffffff',
+				},
+				links: {
+					enable: false,
+				},
+				collisions: {
+					enable: false,
+				},
+				move: {
+					direction: 'top',
+					enable: true,
+					outModes: {
+						default: 'out',
+					},
+					random: true,
+					speed: 2,
+					straight: false,
+				},
+				number: {
+					density: {
 						enable: true,
-						outModes: {
-							default: 'out',
-						},
-						random: true,
-						speed: 2,
-						straight: false,
+						area: 800,
 					},
-					number: {
-						density: {
-							enable: true,
-							area: 800,
-						},
-						value: 100,
-					},
-					opacity: {
-						value: { min: 0.1, max: 0.5 },
-					},
-					shape: {
-						type: 'circle',
-					},
-					size: {
-						value: { min: 1, max: 3 },
-					},
+					value: 100,
 				},
-				detectRetina: true,
-			}"
-		/>
-	</div>
+				opacity: {
+					value: { min: 0.1, max: 0.5 },
+				},
+				shape: {
+					type: 'circle',
+				},
+				size: {
+					value: { min: 1, max: 3 },
+				},
+			},
+			detectRetina: true,
+		}"
+	/>
 </template>
 
 <style scoped>
@@ -83,9 +81,9 @@ const particlesLoaded = async container => {
 	top: 0;
 	left: 0;
 	width: 100%;
-	height: 100%;
+	height: -webkit-fill-available;
 	z-index: -1;
-	background: linear-gradient(180deg, #0e0b14 0%, #1e172f 100%);
+	background: linear-gradient(180deg, #0F0D17 20%, #161222 80%);
 }
 
 html,
