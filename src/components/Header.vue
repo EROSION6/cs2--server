@@ -22,20 +22,23 @@ const isOpen = ref(false)
 			>
 				<nav>
 					<ul class="flex items-center gap-2 lg:flex-col lg:items-start">
-						<li
+						<router-link
 							v-for="link in NAVIGATION_LINKS"
 							:key="link.route"
-							class="flex items-center gap-2 text-[#BC74D4] transition duration-300 hover:bg-[#201a33] py-3 px-4 rounded-2xl cursor-pointer"
+							:to="link.route"
+							class="text-sm lg:text-xl"
 						>
-							<component
-								:is="link.icon"
-								v-if="link.icon"
-								class="w-[18px] h-[18px] lg:hidden"
-							/>
-							<router-link :to="link.route" class="text-sm lg:text-xl">{{
-								link.label
-							}}</router-link>
-						</li>
+							<li
+								class="flex items-center gap-2 text-[#BC74D4] transition duration-300 hover:bg-[#201a33] py-3 px-4 rounded-2xl cursor-pointer"
+							>
+								<component
+									:is="link.icon"
+									v-if="link.icon"
+									class="w-[18px] h-[18px] lg:hidden"
+								/>
+								{{ link.label }}
+							</li></router-link
+						>
 					</ul>
 				</nav>
 				<button

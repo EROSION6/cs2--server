@@ -1,7 +1,9 @@
 <script lang="ts" setup>
-import { ASSETS, SORT_BTN } from '@/constant'
+import { ASSETS } from '@/constant'
 import { computed, ref } from 'vue'
 import AssetCard from './AssetCard.vue'
+
+const SORT_BTN = ['Все', 'ONLY MIRAGE', 'AWP', 'FPS+', 'SANDSTONE', 'DUST 2']
 
 const isActive = ref(0)
 
@@ -29,13 +31,13 @@ const filteredAssets = computed(() => {
 
 <template>
 	<div
-		class="w-full flex gap-2 px-3 py-1 bg-[#1A1529] rounded-lg mt-2 overflow-hidden xl2:w-full"
+		class="w-full flex gap-2 px-3 py-1 bg-[#1A1529] rounded-lg my-3 overflow-hidden xl2:w-full"
 	>
 		<div class="w-full flex gap-2 items-center md:overflow-x-scroll">
 			<button
 				v-for="(btn, index) of SORT_BTN"
 				:key="index"
-				class="bg-[#1E1B2D] py-2.5 px-5 rounded-xl border border-[#1A1529] text-[#BC74D4] transition duration-300 hover:border-[#BC74D4] shrink-0"
+				class="bg-[#1E1B2D] text-sm py-2.5 px-4 rounded-xl border border-[#1A1529] text-[#BC74D4] transition duration-300 hover:border-[#BC74D4] shrink-0"
 				:class="isActive === index ? ' border-[#BC74D4]' : ''"
 				@click="isActive = index"
 			>

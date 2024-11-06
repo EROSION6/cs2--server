@@ -1,11 +1,12 @@
 <script setup lang="ts">
+import type { Engine } from 'node_modules/tsparticles-engine/types/export-types'
 import { loadSlim } from 'tsparticles-slim'
 
-const particlesInit = async engine => {
+const particlesInit = async (engine: Engine) => {
 	await loadSlim(engine)
 }
 
-const particlesLoaded = async container => {
+const particlesLoaded = async (container: any) => {
 	console.log('Particles container loaded', container)
 }
 </script>
@@ -44,21 +45,20 @@ const particlesLoaded = async container => {
 					enable: false,
 				},
 				move: {
-					direction: 'top',
 					enable: true,
+					direction: 'up',
 					outModes: {
 						default: 'out',
 					},
-					random: true,
-					speed: 2,
-					straight: false,
+					speed: 0.5,
+					straight: true,
 				},
 				number: {
 					density: {
 						enable: true,
 						area: 800,
 					},
-					value: 100,
+					value: 150,
 				},
 				opacity: {
 					value: { min: 0.1, max: 0.5 },
@@ -67,7 +67,11 @@ const particlesLoaded = async container => {
 					type: 'circle',
 				},
 				size: {
-					value: { min: 1, max: 3 },
+					value: { min: 1, max: 2 },
+				},
+				position: {
+					x: 50,
+					y: 80,
 				},
 			},
 			detectRetina: true,
@@ -83,7 +87,11 @@ const particlesLoaded = async container => {
 	width: 100%;
 	height: -webkit-fill-available;
 	z-index: -1;
-	background: linear-gradient(180deg, #0F0D17 20%, #161222 80%);
+	background: linear-gradient(
+		180deg,
+		#1e182c 50%,
+		#191125 100%
+	);
 }
 
 html,

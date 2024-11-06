@@ -6,6 +6,8 @@ defineProps({
 	imageUrl: String,
 	cardWidth: String,
 	shadowClass: String,
+	sxTitle: String,
+	sxValue: String,
 })
 </script>
 
@@ -14,8 +16,10 @@ defineProps({
 		:class="`relative py-7 px-5 flex items-center overflow-hidden ${shadowClass} ${cardWidth} rounded-xl cursor-pointer `"
 	>
 		<div class="flex flex-col">
-			<h3 :class="`text-2xl text-[#B379FF] font-bold ${color}`">{{ title }}</h3>
-			<span :class="`text-xl font-bold ${color}`">{{ value }}</span>
+			<h3 :class="`text-2xl text-[#B379FF] font-bold ${sxTitle}`">
+				{{ title }}
+			</h3>
+			<span :class="`font-bold ${sxValue}`">{{ value }}</span>
 		</div>
 		<img
 			:src="imageUrl"

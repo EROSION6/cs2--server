@@ -20,14 +20,16 @@ import CardNavigation from './CardNavigation.vue'
 			<CardNavigation
 				title="На сайте"
 				value="29"
-				color="text-lime-500"
+				sx-title="text-sm text-green-400"
+				sx-value="text-4xl text-green-400"
 				card-width="w-[175px] md:w-[50%]"
 				shadow-class="shadow_green"
 			/>
 			<CardNavigation
 				title="Играют"
 				value="67"
-				color="text-[#B379FF]"
+				sx-title="text-sm text-[#b379ff]"
+				sx-value="text-4xl text-[#b379ff]"
 				card-width="w-[175px] md:w-[50%]"
 				shadow-class="shadow_purple"
 			/>

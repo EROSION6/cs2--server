@@ -6,7 +6,7 @@ import Navigation from './Navigation.vue'
 	<div class="w-full flex gap-2 mt-2 md:flex-col">
 		<div
 			style="
-				background-image: url('https://poshlye-project.ru/app/modules/module_block_main_banner_slider/assets/img/4.jpg');
+				background-image: url('https://poshlye-project.ru/app/modules/module_block_main_banner_slider/assets/img/5.jpg');
 				background-size: cover;
 				background-position: center;
 			"
@@ -14,7 +14,7 @@ import Navigation from './Navigation.vue'
 		>
 			<div class="h-full flex flex-col justify-end items-start gap-2">
 				<h1
-					class="text-3xl font-bold text-white text-shadow-[1px 1px 2px rgb(0 0 0 / 37%)] md:text-2xl"
+					class="text-4xl font-bold text-white text-shadow-[1px 1px 2px rgb(0 0 0 / 37%)] md:text-2xl"
 				>
 					Мечтал о крутых скинах?
 				</h1>

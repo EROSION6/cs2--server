@@ -1,5 +1,5 @@
 <template>
-	<div class="w-[340px] bg-[#1A1529] rounded-xl p-3">
+	<div class="w-[340px] h-auto bg-[#1A1529] rounded-xl p-3">
 		<div class="flex items-center gap-2 mb-2">
 			<img
 				src="https://cdn.akamai.steamstatic.com/steamcommunity/public/images/items/730/c30260bb120bf1379f075802653c8eb86da7a7e9.png"
@@ -11,7 +11,7 @@
 				<p class="text-yellow-400">★★★★★ <span class="text-white">5.0</span></p>
 			</div>
 		</div>
-		<div class="w-full h-28 bg-[#1E1731] rounded-xl p-2">
+		<div class="w-full h-24 bg-[#1E1731] rounded-xl p-2">
 			<p class="text-xs text-[#BC74D4]">
 				крутой сервер а особенно крутой админ die он прям топ)
 			</p>

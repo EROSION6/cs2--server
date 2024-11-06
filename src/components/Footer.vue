@@ -1,9 +1,10 @@
 <script setup lang="ts">
-import { ONELINKS, TWOLINKS } from '@/constant'
 import Discord from './icon/Discord.vue'
 import Vkontake from './icon/Vkontake.vue'
 
+const ONELINKS = ['Магазин', 'Личный кабинет', 'Договор оферты']
 
+const TWOLINKS = ['Помощь', 'Техподдержка', 'Контакты']
 </script>
 
 <template>
@@ -24,7 +25,7 @@ import Vkontake from './icon/Vkontake.vue'
 				</div>
 
 				<div
-					class="flex gap-2 bg-transparent border border-[#BC74D4] rounded-xl py-2 px-3"
+					class="flex gap-2 bg-transparent border border-[#292142] rounded-xl py-2 px-3"
 				>
 					<router-link to="#"
 						><Vkontake
@@ -33,7 +34,7 @@ import Vkontake from './icon/Vkontake.vue'
 					</router-link>
 					<router-link to="#"
 						><Discord
-							color='#b379ff'
+							color="#b379ff"
 							class="w-5 h-5 transition-transform duration-300 hover:scale-110"
 					/></router-link>
 				</div>

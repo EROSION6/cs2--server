@@ -9,8 +9,12 @@ import { STATISTICS_CARDS } from '@/constant'
 			:key="index"
 			:class="`relative h-auto flex flex-col px-4 py-5 overflow-hidden ${statistic.class}`"
 		>
-			<span class="text-[#F4CA80] mb-3">{{ statistic.title }}</span>
-			<b class="text-[#F4CA80] text-4xl font-bold">{{ statistic.value }}</b>
+			<span class="mb-3" :style="`color: ${statistic.color}`">{{
+				statistic.title
+			}}</span>
+			<b class="text-4xl font-bold" :style="`color: ${statistic.color}`">{{
+				statistic.value
+			}}</b>
 			<component :is="statistic.ImageUrl" class="w-20 h-20 absolute -right-4" />
 		</div>
 	</div>
