@@ -9,7 +9,7 @@ import { computed, onMounted, ref } from 'vue'
 const skins = ref<ISkins[]>([])
 const search = ref('')
 const isLoading = ref(true)
-const sortBy = ref('')
+const sortBy = ref('*')
 
 const getAllSkins = async () => {
 	try {

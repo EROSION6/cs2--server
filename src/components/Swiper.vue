@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import Skinchenger from './icon/Skinchenger.vue'
 import Navigation from './Navigation.vue'
 </script>
 
@@ -21,14 +22,16 @@ import Navigation from './Navigation.vue'
 				<p class="text-white md:text-sm">
 					Поставь любой скин и наслаждайся игрой на сервере!
 				</p>
-				<button
-					class="bg-[#B379FF] py-3 px-6 rounded-lg text-white text-sm font-semibold md:px-4"
-				>
-					Скинченджер
-				</button>
+				<router-link to="/skinchenger">
+					<button
+						class="flex items-center gap-2 bg-[#B379FF] py-3 px-6 rounded-lg text-white text-sm font-semibold transition duration-300 hover:bg-opacity-55 md:px-4"
+					>
+						<Skinchenger class="w-5 h-5" />
+						Скинченджер
+					</button>
+				</router-link>
 			</div>
 		</div>
-
 		<Navigation />
 	</div>
 </template>

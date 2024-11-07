@@ -12,7 +12,7 @@ const isActivelink = ref('Главная')
 
 <template>
 	<header
-		class="w-[1440px] flex items-center justify-between px-3 py-1 bg-[#1A1529] rounded-lg xl2:w-full"
+		class="w-[1440px] flex items-center justify-between px-3 py-1 bg-[#1A1529] rounded-xl xl2:w-full"
 	>
 		<button class="hidden lg:block" @click="isOpen = !isOpen">
 			<Burger class="w-10 h-10" />
@@ -32,7 +32,7 @@ const isActivelink = ref('Главная')
 							@click="isActivelink = link.label"
 						>
 							<li
-								:class="`flex items-center gap-2 text-[#BC74D4] transition duration-300 hover:bg-[#201a33] py-3 px-4 rounded-2xl cursor-pointer ${
+								:class="`flex items-center gap-2 text-[#BC74D4] transition duration-300 hover:bg-[#201a33] py-3 px-4 rounded-lg cursor-pointer ${
 									isActivelink === link.label
 										? 'bg-[#201a33]'
 										: 'bg-transparent'

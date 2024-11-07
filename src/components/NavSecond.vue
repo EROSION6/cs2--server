@@ -6,7 +6,7 @@ import Vkontake from './icon/Vkontake.vue'
 
 <template>
 	<div
-		class="w-[1440px] flex items-center justify-between px-2 py-2 bg-[#1A1529] rounded-lg mt-2 xl2:w-full"
+		class="w-[1440px] flex items-center justify-between px-2 py-2 bg-[#1A1529] rounded-xl mt-2 xl2:w-full"
 	>
 		<div class="flex items-center gap-2 md:hidden">
 			<div class="lg:hidden">
