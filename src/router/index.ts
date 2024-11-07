@@ -18,6 +18,11 @@ const router = createRouter({
 			name: 'rules',
 			component: () => import('../views/RulesView.vue'),
 		},
+		{
+			path: '/skinchenger',
+			name: 'skinchenger',
+			component: () => import('../views/SkinchengerView.vue'),
+		},
 	],
 })
 

@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import { TOP_USERS } from '@/constant'
+import { TOP_USERS } from '@/constant/user'
 import CardUser from './CardUser.vue'
 </script>
 
 <template>
-	<div class="relative w-[380px] flex items-center px-5 py-10 shadow_purple">
+	<div class="relative w-full flex items-center px-5 py-10 shadow_purple">
 		<div>
 			<h2 class="text-4xl text-[#BC74D4] font-bold uppercase">top 3</h2>
 			<p class="text-xl text-white">Лучших игроков</p>
@@ -15,7 +15,7 @@ import CardUser from './CardUser.vue'
 			class="absolute w-[227px] h-[130px] right-0"
 		/>
 	</div>
-	<div class="flex flex-col gap-2 mt-2">
+	<div class="w-full flex flex-col gap-2 mt-2">
 		<CardUser v-for="(user, index) in TOP_USERS" :key="index" :user="user" />
 	</div>
 </template>

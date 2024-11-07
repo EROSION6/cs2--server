@@ -6,6 +6,8 @@ import Steam from './icon/Steam.vue'
 import Wallet from './icon/Wallet.vue'
 
 const isOpen = ref(false)
+
+const isActivelink = ref('Главная')
 </script>
 
 <template>
@@ -27,9 +29,14 @@ const isOpen = ref(false)
 							:key="link.route"
 							:to="link.route"
 							class="text-sm lg:text-xl"
+							@click="isActivelink = link.label"
 						>
 							<li
-								class="flex items-center gap-2 text-[#BC74D4] transition duration-300 hover:bg-[#201a33] py-3 px-4 rounded-2xl cursor-pointer"
+								:class="`flex items-center gap-2 text-[#BC74D4] transition duration-300 hover:bg-[#201a33] py-3 px-4 rounded-2xl cursor-pointer ${
+									isActivelink === link.label
+										? 'bg-[#201a33]'
+										: 'bg-transparent'
+								}`"
 							>
 								<component
 									:is="link.icon"

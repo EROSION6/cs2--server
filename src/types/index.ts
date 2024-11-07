@@ -19,3 +19,11 @@ export type ITopUser = {
 	experience: string
 	shadow: string
 }
+
+export type ISkins = {
+	id: number
+	title: string
+	imageUrl: string
+	type: string
+	sort: string
+}

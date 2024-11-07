@@ -49,7 +49,30 @@ defineProps({
 		<progress
 			max="100"
 			:value="asset.value"
-			:class="`w-full h-1 mt-3 [&::-webkit-progress-bar]:rounded-lg [&::-webkit-progress-value]:rounded-lg [&::-webkit-progress-bar]:bg-slate-100 [&::-webkit-progress-value]:${asset.valueColor} [&::-moz-progress-bar]:${asset.valueColor}`"
+			class="mt-3"
+			:style="`--progress-value-color: ${asset.valueColor};`"
 		></progress>
 	</div>
 </template>
+
+<style scoped>
+progress {
+	width: 100%;
+	height: 4px;
+}
+
+progress::-webkit-progress-bar {
+	background-color: #e0e0e0;
+	border-radius: 0.5rem;
+}
+
+progress::-webkit-progress-value {
+	background-color: var(--progress-value-color);
+	border-radius: 0.5rem;
+}
+
+progress::-moz-progress-bar {
+	background-color: var(--progress-value-color);
+	border-radius: 0.5rem;
+}
+</style>

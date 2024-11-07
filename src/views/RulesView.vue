@@ -7,8 +7,12 @@ import TabsRules from '@/components/TabsRules.vue'
 		<div
 			class="w-full bg-[#1A1529] flex flex-col items-center border-x-2 border-[#BC74D4] uppercase py-4"
 		>
-			<h1 class="text-white text-3xl font-bold">Правила проекта POSHLYE</h1>
-			<p class="text-[#BC74D4] font-bold">Найдите ответы на свои вопросы</p>
+			<h1 class="text-white text-3xl font-bold md:text-2xl">
+				Правила проекта POSHLYE
+			</h1>
+			<p class="text-[#BC74D4] font-bold md:text-sm">
+				Найдите ответы на свои вопросы
+			</p>
 		</div>
 
 		<TabsRules />

@@ -23,7 +23,7 @@ defineProps({
 		</div>
 		<img
 			:src="imageUrl"
-			alt="img"
+			alt="."
 			class="absolute w-[20rem] h-[160px] -right-[60px] -bottom-[55px]"
 		/>
 	</div>

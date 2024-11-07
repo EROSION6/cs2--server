@@ -6,10 +6,14 @@ import TopUser from '@/components/TopUser.vue'
 
 <template>
 	<div class="w-[1440px] h-full mt-2 xl2:w-full">
-		<div class="w-full flex items-center gap-2">
-			<OptionUser />
-			<TableUser />
+		<div class="w-full flex gap-2 justify-between lg:flex-col">
+			<div class="w-2/6 flex flex-col overflow-hidden lg:w-full">
+				<OptionUser />
+				<TopUser />
+			</div>
+			<div class="w-2/3 lg:w-full">
+				<TableUser />
+			</div>
 		</div>
-		<TopUser />
 	</div>
 </template>

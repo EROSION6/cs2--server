@@ -1,13 +1,13 @@
 <template>
 	<div
-		class="w-full flex items-center justify-between gap-5 bg-[#2D2445] rounded-xl uppercase p-4"
+		class="w-full h-14 flex items-center justify-center gap-5 bg-[#2D2445] rounded-xl uppercase px-4 overflow-x-scroll mt-2"
 	>
-		<div class="space-x-10">
+		<div class="flex items-center justify-center gap-10">
 			<span class="text-xs text-[#BC74D4] opacity-50">q</span>
 			<span class="text-xs text-[#BC74D4] opacity-50">e</span>
 			<span class="text-xs text-[#BC74D4] opacity-50">Игрок</span>
 		</div>
-		<div class="space-x-10">
+		<div class="flex items-center justify-center gap-10">
 			<span class="text-xs text-[#BC74D4] opacity-50">опыт</span>
 			<span class="text-xs text-[#BC74D4] opacity-50">звание</span>
 			<span class="text-xs text-[#BC74D4] opacity-50">убийства</span>
